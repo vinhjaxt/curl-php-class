@@ -1,0 +1,29 @@
+<style>body {color: black; background-color: white;} tr:hover { background: yellow }</style><h2>GET / HTTP/1.1</h2><h2>Remote: 42.113.73.93 49659</h2><table mini:hint='folded;Headers' border=0 cellpadding=3 cellspacing=0>
+<tr><td valign=top><b>Host:</b></td><td> echo.opera.com</td></tr>
+<tr><td valign=top><b>User-Agent:</b></td><td> Mozilla/5.0 (Windows NT 10.0; Win32; x32; rv:45.0) Gecko/20100101 Firefox/45.0</td></tr>
+<tr><td valign=top><b>Accept:</b></td><td> */*</td></tr>
+<tr><td valign=top><b>Accept-Encoding:</b></td><td> deflate, gzip</td></tr>
+<tr><td valign=top><b>Referer:</b></td><td> http://echo.opera.com/</td></tr>
+<tr><td valign=top><b>Accept-Language:</b></td><td> en-US,en;q=0.5</td></tr>
+<tr><td valign=top><b>Pragma:</b></td><td> no-cache</td></tr>
+<tr><td valign=top><b>Cache-Control:</b></td><td> no-cache</td></tr>
+</table><hr noshade><div mini:hint='folded;Raw Request'><h2>Raw request</h2><pre>  0: 47 45 54 20 2f 20 48 54 54 50 2f 31 2e 31 0d 0a   GET / HTTP/1.1..
+ 10: 48 6f 73 74 3a 20 65 63 68 6f 2e 6f 70 65 72 61   Host: echo.opera
+ 20: 2e 63 6f 6d 0d 0a 55 73 65 72 2d 41 67 65 6e 74   .com..User-Agent
+ 30: 3a 20 4d 6f 7a 69 6c 6c 61 2f 35 2e 30 20 28 57   : Mozilla/5.0 (W
+ 40: 69 6e 64 6f 77 73 20 4e 54 20 31 30 2e 30 3b 20   indows NT 10.0; 
+ 50: 57 69 6e 33 32 3b 20 78 33 32 3b 20 72 76 3a 34   Win32; x32; rv:4
+ 60: 35 2e 30 29 20 47 65 63 6b 6f 2f 32 30 31 30 30   5.0) Gecko/20100
+ 70: 31 30 31 20 46 69 72 65 66 6f 78 2f 34 35 2e 30   101 Firefox/45.0
+ 80: 0d 0a 41 63 63 65 70 74 3a 20 2a 2f 2a 0d 0a 41   ..Accept: */*..A
+ 90: 63 63 65 70 74 2d 45 6e 63 6f 64 69 6e 67 3a 20   ccept-Encoding: 
+ a0: 64 65 66 6c 61 74 65 2c 20 67 7a 69 70 0d 0a 52   deflate, gzip..R
+ b0: 65 66 65 72 65 72 3a 20 68 74 74 70 3a 2f 2f 65   eferer: http://e
+ c0: 63 68 6f 2e 6f 70 65 72 61 2e 63 6f 6d 2f 0d 0a   cho.opera.com/..
+ d0: 41 63 63 65 70 74 2d 4c 61 6e 67 75 61 67 65 3a   Accept-Language:
+ e0: 20 65 6e 2d 55 53 2c 65 6e 3b 71 3d 30 2e 35 0d    en-US,en;q=0.5.
+ f0: 0a 50 72 61 67 6d 61 3a 20 6e 6f 2d 63 61 63 68   .Pragma: no-cach
+100: 65 0d 0a 43 61 63 68 65 2d 43 6f 6e 74 72 6f 6c   e..Cache-Control
+110: 3a 20 6e 6f 2d 63 61 63 68 65 0d 0a 0d 0a         : no-cache....
+</pre></div><hr noshade><p>Page generated at Tue Jul  4 15:30:38 2017
+</p>

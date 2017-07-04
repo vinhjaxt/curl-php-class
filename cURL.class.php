@@ -152,10 +152,10 @@ if(!class_exists('cURL')){
 		}
 		private $proxyTypes=array(
 			'http'=>CURLPROXY_HTTP,
-			'sock5'=>CURLPROXY_SOCKS5,
-			'sock4'=>CURLPROXY_SOCKS4,
-			'sock4a'=>CURLPROXY_SOCKS4A,
-			'sock5hostname'=>CURLPROXY_SOCKS5_HOSTNAME
+			'socks4'=>CURLPROXY_SOCKS4,
+			'socks4a'=>CURLPROXY_SOCKS4A,
+			'socks5'=>CURLPROXY_SOCKS5,
+			'socks5hostname'=>CURLPROXY_SOCKS5_HOSTNAME
 			);
 		public function setProxy($options=array('auth'=>'user:pass','server'=>'','port'=>80,'type'=>'http','user'=>'','password'=>'')){
 			if(!isset($options['server']) || !$options['server']){
@@ -308,6 +308,10 @@ if(!class_exists('cURL')){
 			if(!$func) return false;
 			$this->writeFunction=$func;
 		}
+		# cancel custom write body function
+		public function unsetWriteFunction($func){
+			$this->writeFunction=false;
+		}
 
 		# private function to read the body of the page
 		private function readBody($handle,$data){
@@ -341,11 +345,22 @@ if(!class_exists('cURL')){
 			$this->writeToFile=$file;
 		}
 
+		# unset writeToFile, return the webpage
+		public function unsetWriteToFile(){
+			$this->writeToFile=false;
+		}
+
 		# custom read response headers of the page
 		public function setHeaderFunction($func){
 			if(!$func) return false;
 			$this->headerFunction=$func;
 		}
+
+		# cancel custom read response headers of the page
+		public function unsetHeaderFunction(){
+			$this->headerFunction=false;
+		}
+
 		# private function to read the headers
 		private function readHeader($handle,$data){
 			$len=strlen($data);
@@ -464,7 +479,7 @@ if(!class_exists('cURL')){
 		}
 
 		# set post field
-		public function setPostField($field,$value){
+		public function setPostField($field,$value=''){
 			if(!$field){
 				$this->appendError('setPostField($field,$value): $field and $value can not be empty.');
 				return false;
@@ -473,7 +488,11 @@ if(!class_exists('cURL')){
 				$this->options[CURLOPT_CUSTOMREQUEST]='POST';
 				$this->options[CURLOPT_POST]=true;
 				$this->options[CURLOPT_SAFE_UPLOAD]=true;
-				$this->posts[$field]=$value;
+				$fields=$field;
+				if(!is_array($fields)) $fields=array($field => $value);
+				foreach($fields as $field => $value){
+					$this->posts[$field]=$value;
+				}
 			}
 			else
 				$this->appendError('setPostContent was called. Can not setPostField');
