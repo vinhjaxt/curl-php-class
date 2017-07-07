@@ -1,5 +1,6 @@
 {
     "name": "vinhjaxt/curl-php-class",
+	"version": "0.1.1",
     "description": "a php class make curl esier to use",
     "type": "library",
     "license": "MIT",
