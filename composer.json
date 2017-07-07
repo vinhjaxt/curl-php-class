@@ -14,6 +14,7 @@
 		"ext-openssl": "*",
 		"ext-curl": "*"
 	},
+	"minimum-stability": "stable",
 	"keywords": [ "curl", "crawl" ],
 	"homepage": "https://github.com/vinhjaxt/curl-php-class",
 	"autoload": {
