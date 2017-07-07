@@ -1,6 +1,7 @@
 <?php
 # class cURL
 # by VinhNoName
+# repo https://github.com/vinhjaxt/curl-php-class
 # follow me: https://github.com/vinhjaxt/
 if(!class_exists('cURLResponse')){
 	class cURLResponse{
