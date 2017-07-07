@@ -1,0 +1,36 @@
+{
+    "name": "test/composer",
+    "authors": [
+        {
+            "name": "Vinh Duong",
+            "email": "ngoc.lo.dang@gmail.com"
+        }
+    ],
+	"repositories": [
+		{
+			"packagist.org": false
+		},
+		{
+			"type": "package",
+			"package": {
+				"name": "vinhjaxt/curl-php-class",
+				"version": "0.1.1",
+				"type": "package",
+					"url": "git@github.com:/vinhjaxt/curl-php-class.git",
+				"source": {
+					"url": "https://github.com:/vinhjaxt/curl-php-class",
+					"type": "git",
+					"reference": "master"
+				},
+				"autoload": {
+					"classmap": ["src/"]
+				}
+			}
+		}
+
+
+	],
+    "require": {
+        "vinhjaxt/curl-php-class": "^0.1.1"
+    }
+}
