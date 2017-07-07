@@ -1,5 +1,5 @@
 <?php
-include '../cURL.class.php';
+include '../src/cURL.class.php';
 
 $curl = new cURL('http://fb.com/');
 $curl->setCookie('a=b');

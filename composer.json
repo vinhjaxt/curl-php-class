@@ -1,0 +1,22 @@
+{
+    "name": "vinhjaxt/curl-php-class",
+    "description": "a php class make curl esier to use",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Vinh Duong",
+            "email": "ngoc.lo.dang@gmail.com"
+        }
+    ],
+	"require": {
+		"php": ">=4.0.2",
+		"ext-openssl": "*",
+		"ext-curl": "*"
+	},
+	"keywords": [ "curl", "crawl" ],
+	"homepage": "https://github.com/vinhjaxt/curl-php-class",
+	"autoload": {
+		"classmap": ["src/"]
+	}
+}

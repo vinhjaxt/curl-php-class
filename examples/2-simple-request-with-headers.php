@@ -1,5 +1,5 @@
 <?php
-include '../cURL.class.php';
+include '../src/cURL.class.php';
 
 $curl = new cURL('http://echo.opera.com/');
 $curl->setHeaders(array('Content-Type: application/json','X-Requested-With: cURL'));

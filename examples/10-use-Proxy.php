@@ -1,5 +1,5 @@
 <?php
-include '../cURL.class.php';
+include '../src/cURL.class.php';
 
 $curl = new cURL('http://echo.opera.com/');
 $curl->setProxy(array('server'=>'123.12.13.23'));
