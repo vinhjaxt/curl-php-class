@@ -17,8 +17,7 @@
 	},
 	"keywords": [ "curl", "crawl" ],
 	"autoload": {
-		"classmap": ["src/"],
-		"files":["src/cURL.class.php"]
+		"classmap": ["src/"]
 	},
 	"homepage": "https://github.com/vinhjaxt/curl-php-class"
 }
