@@ -15,6 +15,7 @@
 		"ext-curl": "*"
 	},
 	"minimum-stability": "stable",
+	"prefer-stable": true,
 	"keywords": [ "curl", "crawl" ],
 	"homepage": "https://github.com/vinhjaxt/curl-php-class",
 	"autoload": {
