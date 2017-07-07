@@ -15,11 +15,24 @@
 		"ext-openssl": "*",
 		"ext-curl": "*"
 	},
+	"require-dev": {
+		"php": ">=4.0.2",
+		"ext-openssl": "*",
+		"ext-curl": "*"
+	},
 	"minimum-stability": "dev",
 	"prefer-stable": true,
 	"keywords": [ "curl", "crawl" ],
-	"homepage": "https://github.com/vinhjaxt/curl-php-class",
 	"autoload": {
 		"classmap": ["src/"]
+	},
+	"autoload-dev": {
+		"classmap": ["src/"]
+	},
+	"homepage": "https://github.com/vinhjaxt/curl-php-class",
+	"config": {
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "optimize-autoloader": true
 	}
 }
