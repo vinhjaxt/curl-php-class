@@ -106,7 +106,7 @@ if(!class_exists('cURL')){
 				CURLOPT_CONNECTTIMEOUT => 10,	  // timeout on connect (s)
 				CURLOPT_TIMEOUT 	   => 120,	  // timeout on connect && response (s)
 				CURLOPT_SSL_VERIFYPEER => false,
-				CURLOPT_SSL_VERIFYHOST => false,
+//				CURLOPT_SSL_VERIFYHOST => false,
 				CURLOPT_FOLLOWLOCATION => true,
 				CURLOPT_MAXREDIRS	   => 5,
 				CURLOPT_AUTOREFERER    => true,
@@ -471,6 +471,19 @@ if(!class_exists('cURL')){
 			return $this->errors;
 		}
 
+		# Set hosts content to resolve ip
+		/*
+		$resolve = array(sprintf(
+				"%s:%d:%s", 
+				$hostname,
+				$port,
+				$siteIP
+			));
+		*/
+		public function Resolve($resolve){
+			$this->options[CURLOPT_RESOLVE]=$resolve;
+		}
+
 		# set custom post content
 		public function setPostContent($content){
 			$this->options[CURLOPT_CUSTOMREQUEST]='POST';
@@ -597,6 +610,8 @@ if(!class_exists('cURL')){
 			$this->Headers='';
 			if(!empty($this->posts)) $this->options[CURLOPT_POSTFIELDS]=$this->posts;
 			curl_setopt_array($this->ch,$this->options);
+			$response=curl_exec($this->ch);
+
 			$this->options=array();
 			$this->posts=array();
 			$this->requestHeaders=array();
@@ -604,7 +619,7 @@ if(!class_exists('cURL')){
 			$this->options[CURLOPT_CUSTOMREQUEST]='GET';
 
 			$this->executed=true;
-			$response=curl_exec($this->ch);
+
 			$noError=true;
 			if($response === false){
 				$noError=false;
